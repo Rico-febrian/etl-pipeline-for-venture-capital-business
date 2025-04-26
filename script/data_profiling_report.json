@@ -1,0 +1,702 @@
+{
+    "Created by": "rico_febrian",
+    "Checking Date": "05/04/25",
+    "Column Information": {
+        "Acquisition": {
+            "count": 11,
+            "columns": [
+                "acquisition_id",
+                "acquiring_object_id",
+                "acquired_object_id",
+                "term_code",
+                "price_amount",
+                "price_currency_code",
+                "acquired_at",
+                "source_url",
+                "source_description",
+                "created_at",
+                "updated_at"
+            ]
+        },
+        "Company": {
+            "count": 14,
+            "columns": [
+                "office_id",
+                "object_id",
+                "description",
+                "region",
+                "address1",
+                "address2",
+                "city",
+                "zip_code",
+                "state_code",
+                "country_code",
+                "latitude",
+                "longitude",
+                "created_at",
+                "updated_at"
+            ]
+        },
+        "Funding Rounds": {
+            "count": 22,
+            "columns": [
+                "funding_round_id",
+                "object_id",
+                "funded_at",
+                "funding_round_type",
+                "funding_round_code",
+                "raised_amount_usd",
+                "raised_amount",
+                "raised_currency_code",
+                "pre_money_valuation_usd",
+                "pre_money_valuation",
+                "pre_money_currency_code",
+                "post_money_valuation_usd",
+                "post_money_valuation",
+                "post_money_currency_code",
+                "participants",
+                "is_first_round",
+                "is_last_round",
+                "source_url",
+                "source_description",
+                "created_by",
+                "created_at",
+                "updated_at"
+            ]
+        },
+        "Funds": {
+            "count": 10,
+            "columns": [
+                "fund_id",
+                "object_id",
+                "name",
+                "funded_at",
+                "raised_amount",
+                "raised_currency_code",
+                "source_url",
+                "source_description",
+                "created_at",
+                "updated_at"
+            ]
+        },
+        "Investments": {
+            "count": 6,
+            "columns": [
+                "investment_id",
+                "funding_round_id",
+                "funded_object_id",
+                "investor_object_id",
+                "created_at",
+                "updated_at"
+            ]
+        },
+        "IPOS": {
+            "count": 12,
+            "columns": [
+                "ipo_id",
+                "object_id",
+                "valuation_amount",
+                "valuation_currency_code",
+                "raised_amount",
+                "raised_currency_code",
+                "public_at",
+                "stock_symbol",
+                "source_url",
+                "source_description",
+                "created_at",
+                "updated_at"
+            ]
+        },
+        "People": {
+            "count": 6,
+            "columns": [
+                "people_id",
+                "object_id",
+                "first_name",
+                "last_name",
+                "birthplace",
+                "affiliation_name"
+            ]
+        },
+        "Relationships": {
+            "count": 10,
+            "columns": [
+                "relationship_id",
+                "person_object_id",
+                "relationship_object_id",
+                "start_at",
+                "end_at",
+                "is_past",
+                "sequence",
+                "title",
+                "created_at",
+                "updated_at"
+            ]
+        },
+        "Milestones": {
+            "count": 9,
+            "columns": [
+                "created_at",
+                "description",
+                "milestone_at",
+                "milestone_code",
+                "milestone_id",
+                "object_id",
+                "source_description",
+                "source_url",
+                "updated_at"
+            ]
+        }
+    },
+    "Check Data Size": {
+        "Acquisition": 6330,
+        "Company": 95043,
+        "Funding Rounds": 50182,
+        "Funds": 1493,
+        "Investments": 59407,
+        "IPOS": 1194,
+        "People": 226709,
+        "Relationships": 134726,
+        "Milestones": 36
+    },
+    "Data Type For Each Column": {
+        "Acquisition": [
+            [
+                "acquisition_id",
+                "int"
+            ],
+            [
+                "acquiring_object_id",
+                "string"
+            ],
+            [
+                "acquired_object_id",
+                "string"
+            ],
+            [
+                "term_code",
+                "string"
+            ],
+            [
+                "price_amount",
+                "decimal(15,2)"
+            ],
+            [
+                "price_currency_code",
+                "string"
+            ],
+            [
+                "acquired_at",
+                "timestamp"
+            ],
+            [
+                "source_url",
+                "string"
+            ],
+            [
+                "source_description",
+                "string"
+            ],
+            [
+                "created_at",
+                "timestamp"
+            ],
+            [
+                "updated_at",
+                "timestamp"
+            ]
+        ],
+        "Company": [
+            [
+                "office_id",
+                "int"
+            ],
+            [
+                "object_id",
+                "string"
+            ],
+            [
+                "description",
+                "string"
+            ],
+            [
+                "region",
+                "string"
+            ],
+            [
+                "address1",
+                "string"
+            ],
+            [
+                "address2",
+                "string"
+            ],
+            [
+                "city",
+                "string"
+            ],
+            [
+                "zip_code",
+                "string"
+            ],
+            [
+                "state_code",
+                "string"
+            ],
+            [
+                "country_code",
+                "string"
+            ],
+            [
+                "latitude",
+                "decimal(9,6)"
+            ],
+            [
+                "longitude",
+                "decimal(9,6)"
+            ],
+            [
+                "created_at",
+                "timestamp"
+            ],
+            [
+                "updated_at",
+                "timestamp"
+            ]
+        ],
+        "Funding Rounds": [
+            [
+                "funding_round_id",
+                "int"
+            ],
+            [
+                "object_id",
+                "string"
+            ],
+            [
+                "funded_at",
+                "date"
+            ],
+            [
+                "funding_round_type",
+                "string"
+            ],
+            [
+                "funding_round_code",
+                "string"
+            ],
+            [
+                "raised_amount_usd",
+                "decimal(15,2)"
+            ],
+            [
+                "raised_amount",
+                "decimal(15,2)"
+            ],
+            [
+                "raised_currency_code",
+                "string"
+            ],
+            [
+                "pre_money_valuation_usd",
+                "decimal(15,2)"
+            ],
+            [
+                "pre_money_valuation",
+                "decimal(15,2)"
+            ],
+            [
+                "pre_money_currency_code",
+                "string"
+            ],
+            [
+                "post_money_valuation_usd",
+                "decimal(15,2)"
+            ],
+            [
+                "post_money_valuation",
+                "decimal(15,2)"
+            ],
+            [
+                "post_money_currency_code",
+                "string"
+            ],
+            [
+                "participants",
+                "string"
+            ],
+            [
+                "is_first_round",
+                "boolean"
+            ],
+            [
+                "is_last_round",
+                "boolean"
+            ],
+            [
+                "source_url",
+                "string"
+            ],
+            [
+                "source_description",
+                "string"
+            ],
+            [
+                "created_by",
+                "string"
+            ],
+            [
+                "created_at",
+                "timestamp"
+            ],
+            [
+                "updated_at",
+                "timestamp"
+            ]
+        ],
+        "Funds": [
+            [
+                "fund_id",
+                "string"
+            ],
+            [
+                "object_id",
+                "string"
+            ],
+            [
+                "name",
+                "string"
+            ],
+            [
+                "funded_at",
+                "date"
+            ],
+            [
+                "raised_amount",
+                "decimal(15,2)"
+            ],
+            [
+                "raised_currency_code",
+                "string"
+            ],
+            [
+                "source_url",
+                "string"
+            ],
+            [
+                "source_description",
+                "string"
+            ],
+            [
+                "created_at",
+                "timestamp"
+            ],
+            [
+                "updated_at",
+                "timestamp"
+            ]
+        ],
+        "Investments": [
+            [
+                "investment_id",
+                "int"
+            ],
+            [
+                "funding_round_id",
+                "int"
+            ],
+            [
+                "funded_object_id",
+                "string"
+            ],
+            [
+                "investor_object_id",
+                "string"
+            ],
+            [
+                "created_at",
+                "timestamp"
+            ],
+            [
+                "updated_at",
+                "timestamp"
+            ]
+        ],
+        "IPOS": [
+            [
+                "ipo_id",
+                "string"
+            ],
+            [
+                "object_id",
+                "string"
+            ],
+            [
+                "valuation_amount",
+                "decimal(15,2)"
+            ],
+            [
+                "valuation_currency_code",
+                "string"
+            ],
+            [
+                "raised_amount",
+                "decimal(15,2)"
+            ],
+            [
+                "raised_currency_code",
+                "string"
+            ],
+            [
+                "public_at",
+                "timestamp"
+            ],
+            [
+                "stock_symbol",
+                "string"
+            ],
+            [
+                "source_url",
+                "string"
+            ],
+            [
+                "source_description",
+                "string"
+            ],
+            [
+                "created_at",
+                "timestamp"
+            ],
+            [
+                "updated_at",
+                "timestamp"
+            ]
+        ],
+        "People": [
+            [
+                "people_id",
+                "string"
+            ],
+            [
+                "object_id",
+                "string"
+            ],
+            [
+                "first_name",
+                "string"
+            ],
+            [
+                "last_name",
+                "string"
+            ],
+            [
+                "birthplace",
+                "string"
+            ],
+            [
+                "affiliation_name",
+                "string"
+            ]
+        ],
+        "Relationships": [
+            [
+                "relationship_id",
+                "string"
+            ],
+            [
+                "person_object_id",
+                "string"
+            ],
+            [
+                "relationship_object_id",
+                "string"
+            ],
+            [
+                "start_at",
+                "string"
+            ],
+            [
+                "end_at",
+                "string"
+            ],
+            [
+                "is_past",
+                "string"
+            ],
+            [
+                "sequence",
+                "string"
+            ],
+            [
+                "title",
+                "string"
+            ],
+            [
+                "created_at",
+                "string"
+            ],
+            [
+                "updated_at",
+                "string"
+            ]
+        ],
+        "Milestones": [
+            [
+                "created_at",
+                "string"
+            ],
+            [
+                "description",
+                "string"
+            ],
+            [
+                "milestone_at",
+                "string"
+            ],
+            [
+                "milestone_code",
+                "string"
+            ],
+            [
+                "milestone_id",
+                "bigint"
+            ],
+            [
+                "object_id",
+                "string"
+            ],
+            [
+                "source_description",
+                "string"
+            ],
+            [
+                "source_url",
+                "string"
+            ],
+            [
+                "updated_at",
+                "string"
+            ]
+        ]
+    },
+    "Check Missing Value": {
+        "Acquisition": {
+            "acquisition_id": 0.0,
+            "acquiring_object_id": 0.0,
+            "acquired_object_id": 0.0,
+            "term_code": 0.0,
+            "price_amount": 0.0,
+            "price_currency_code": 0.0,
+            "acquired_at": 0.16,
+            "source_url": 0.0,
+            "source_description": 0.0,
+            "created_at": 0.0,
+            "updated_at": 0.0
+        },
+        "Company": {
+            "office_id": 0.0,
+            "object_id": 0.0,
+            "description": 0.0,
+            "region": 0.0,
+            "address1": 0.0,
+            "address2": 0.0,
+            "city": 0.0,
+            "zip_code": 0.0,
+            "state_code": 0.0,
+            "country_code": 0.0,
+            "latitude": 0.0,
+            "longitude": 0.0,
+            "created_at": 0.0,
+            "updated_at": 0.0
+        },
+        "Funding Rounds": {
+            "funding_round_id": 0.0,
+            "object_id": 0.0,
+            "funded_at": 0.41,
+            "funding_round_type": 0.0,
+            "funding_round_code": 0.0,
+            "raised_amount_usd": 0.0,
+            "raised_amount": 0.0,
+            "raised_currency_code": 0.0,
+            "pre_money_valuation_usd": 0.0,
+            "pre_money_valuation": 0.0,
+            "pre_money_currency_code": 0.0,
+            "post_money_valuation_usd": 0.0,
+            "post_money_valuation": 0.0,
+            "post_money_currency_code": 0.0,
+            "participants": 0.0,
+            "is_first_round": 0.0,
+            "is_last_round": 0.0,
+            "source_url": 0.0,
+            "source_description": 0.0,
+            "created_by": 0.0,
+            "created_at": 0.0,
+            "updated_at": 0.0
+        },
+        "Funds": {
+            "fund_id": 0.0,
+            "object_id": 0.0,
+            "name": 0.0,
+            "funded_at": 7.5,
+            "raised_amount": 0.0,
+            "raised_currency_code": 0.0,
+            "source_url": 0.0,
+            "source_description": 0.0,
+            "created_at": 0.0,
+            "updated_at": 0.0
+        },
+        "Investments": {
+            "investment_id": 0.0,
+            "funding_round_id": 0.0,
+            "funded_object_id": 0.0,
+            "investor_object_id": 0.0,
+            "created_at": 0.0,
+            "updated_at": 0.0
+        },
+        "IPOS": {
+            "ipo_id": 0.0,
+            "object_id": 0.0,
+            "valuation_amount": 0.0,
+            "valuation_currency_code": 0.0,
+            "raised_amount": 0.0,
+            "raised_currency_code": 0.0,
+            "public_at": 47.82,
+            "stock_symbol": 0.0,
+            "source_url": 0.0,
+            "source_description": 0.0,
+            "created_at": 0.0,
+            "updated_at": 0.0
+        },
+        "People": {
+            "people_id": 0.0,
+            "object_id": 0.0,
+            "first_name": 0.0,
+            "last_name": 0.0,
+            "birthplace": 87.61,
+            "affiliation_name": 0.01
+        },
+        "Relationships": {
+            "relationship_id": 0.0,
+            "person_object_id": 0.0,
+            "relationship_object_id": 0.0,
+            "start_at": 53.48,
+            "end_at": 85.71,
+            "is_past": 0.0,
+            "sequence": 0.0,
+            "title": 4.03,
+            "created_at": 0.0,
+            "updated_at": 0.0
+        },
+        "Milestones": {
+            "created_at": 0.0,
+            "description": 0.0,
+            "milestone_at": 0.0,
+            "milestone_code": 0.0,
+            "milestone_id": 0.0,
+            "object_id": 0.0,
+            "source_description": 0.0,
+            "source_url": 0.0,
+            "updated_at": 0.0
+        }
+    }
+}
