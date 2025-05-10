@@ -4,4 +4,4 @@
 
 **Latest update:** 
 
-I'm still experimenting and exploring datasets for the transformation process and loading them into the DWH
+The development phase is sufficient for now. I'm currently restructuring the code to be more modular by separating each service/function into individual Python scripts, which will later be executed from a single main script.
