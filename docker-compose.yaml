@@ -17,21 +17,22 @@ services:
     networks:
       - pyspark_project_net
 
-  pyspark_project_minio:
-    image: minio/minio:latest
-    hostname: minio
-    container_name: pyspark_project_minio
-    ports:
-      - "9000:9000"
-      - "9001:9001"
-    volumes:
-      - ./minio/data/:/data/
-    environment:
-      - MINIO_ROOT_USER=${MINIO_ROOT_USER}
-      - MINIO_ROOT_PASSWORD=${MINIO_ROOT_PASSWORD}
-    command: server /data --console-address ":9001"
-    networks:
-      - pyspark_project_net
+  # Uncomment the following lines to enable MinIO service
+  # pyspark_project_minio:
+  #   image: minio/minio:latest
+  #   hostname: minio
+  #   container_name: pyspark_project_minio
+  #   ports:
+  #     - "9000:9000"
+  #     - "9001:9001"
+  #   volumes:
+  #     - ./minio/data/:/data/
+  #   environment:
+  #     - MINIO_ROOT_USER=${MINIO_ROOT_USER}
+  #     - MINIO_ROOT_PASSWORD=${MINIO_ROOT_PASSWORD}
+  #   command: server /data --console-address ":9001"
+  #   networks:
+  #     - pyspark_project_net
 
   pyspark_project_source_db:
     image: postgres:latest
