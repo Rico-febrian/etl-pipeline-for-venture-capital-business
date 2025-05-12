@@ -1,4 +1,4 @@
-# Build a Data Warehous and ETL Pipeline with PySpark for Venture Capital Business
+# Build a Data Warehouse and ETL Pipeline with PySpark for Venture Capital Business
 
 ## Work is still in progress...
 

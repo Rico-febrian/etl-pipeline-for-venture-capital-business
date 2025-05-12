@@ -1,5 +1,7 @@
 # Data Warehouse Schema Documentation
 
+---
+
 ## Dimension Tables
 
 ### dim_company
@@ -54,6 +56,8 @@
 |--------|--------|-------------|
 | - | All columns | Date dimension (generated) |
 
+---
+
 ## Fact Tables
 
 ### fct_investing
@@ -101,6 +105,8 @@
 | `acquisition.source_description` | `description` | Acquisition description |
 | `acquisition.created_at` | `created_at` | Record creation timestamp |
 | `acquisition.updated_at` | `updated_at` | Record update timestamp |
+
+---
 
 ## Key Abbreviations
 - **PK**: Primary Key
