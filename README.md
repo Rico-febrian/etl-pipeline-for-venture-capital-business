@@ -1,7 +1,5 @@
 # Build a Data Warehouse and ETL Pipeline with PySpark for Venture Capital Business
 
-## Work is still in progress...
-
 **Latest update:** 
 
-The development phase is sufficient for now. I'm currently restructuring the code to be more modular by separating each service/function into individual Python scripts, which will later be executed from a single main script.
+The development phase of this project is now complete. The pipeline is ready to use. I am currently working on a written setup guide on how to run this pipeline locally, **which will be published on my Medium page**.
