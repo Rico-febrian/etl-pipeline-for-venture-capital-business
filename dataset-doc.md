@@ -1,9 +1,12 @@
 # Dataset Description
 
-## Database
+---
 
-ERD:
-![Startup Public Image]()
+## Database ERD
+
+![Data Source ERD](https://github.com/Rico-febrian/etl-pipeline-for-venture-capital-business/blob/main/pict/data-source-erd.png)
+
+---
 
 ### Company 
 contains detailed information about various startup company locaation
@@ -119,7 +122,9 @@ details about initial public offerings (IPOs) of companies. Each record represen
 | `created_at`          | Timestamp when the IPO record was created.                                  |
 | `updated_at`          | Timestamp when the IPO record was last updated.                             |
 
-## File
+---
+
+## CSV File
 
 ### People
 contains information about individuals associated with entities in the startup investment context.
@@ -149,6 +154,8 @@ tracks various relationships between individuals and companies within the startu
 | `title`                | Title or role of the person in the relationship (e.g., Co-Founder, CEO). |
 | `created_at`           | Timestamp when the record was created.                            |
 | `updated_at`           | Timestamp when the record was last updated.                       |
+
+---
 
 ## API
 
